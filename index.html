@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Fall game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="parent" class="parentClass">
+
+        <div id="config" class="cfg">
+                <h2> F a l  l... ... Game </h2>
+                <p> Name <input id="Name" type="text" placeholder="Name">  </p>
+                <p> Age <input id="Age"  type="text" placeholder="Age">  </p>
+                <p>
+                    Select and play the  desired Game Level below... 
+                    <select name="level" id="level" onChange="startGame(this.value)">
+                        <option value="0">Select your level</option>
+                        <option value="32">Easy</option>
+                        <option value="16">Medium</option>
+                        <option value="8">Hard</option>
+                    </select>
+                </p>
+                        
+        </div>
+
+        <div id="game">
+            <div id="character"></div>
+        </div>
+
+    </div> 
+    </body>
+    <script src="main_new.js"></script>
+
+</html>

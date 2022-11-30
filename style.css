@@ -1,0 +1,56 @@
+*{
+  padding: 10;
+  margin: 0;
+}
+
+parentClass { 
+display: grid;
+align-items: center;
+grid-template-columns: 2fr 1fr; 
+grid-gap: 20px; 
+width: 50%; 
+} 
+
+.cfg { 
+align-items: center;
+margin: auto;
+float: auto;  
+overflow: hidden;
+border: 1px solid rgb(213, 9, 9);
+}
+
+#game{
+width: 60%;  
+margin: auto;  
+overflow: visible;
+overflow-x: visible;
+overflow-y: visible;
+}
+
+#character{
+width: 20px;
+height: 20px;
+background-color: rgb(19, 169, 218);
+border-radius: 50%;
+position: relative;
+top: 400px;
+left: 190px;
+z-index: 1000000;
+}
+
+.block{
+  height: 20px;
+  background-color: rgb(8, 180, 248);
+  position: relative;
+  top: 100px;
+  margin-top: -20px;
+}
+
+.hole{
+  width: 40px;
+  height: 20px;
+  background-color: white;
+  position: relative;
+  top: 100px;
+  margin-top: -20px;
+}  
