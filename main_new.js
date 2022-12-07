@@ -6,6 +6,7 @@ var counter = 0;
 var currentBlocks = [];
 var fieldWidth = 0;
 var blocks = 0;
+var ballColor = "rgb(" + 18 + "," + 158 + "," + 205 + ")";
 
 var movePx = 7; // ball move Speed
 var refreshTimer = 5; // ball move Speed
@@ -140,7 +141,35 @@ function runner () {
 
 //},1);
 
-function startGame(selectedValue){
+function hexAToRGBA(h) {
+    let r = 0, g = 0, b = 0, a = 1;
+  
+    if (h.length == 5) {
+      r = "0x" + h[1] + h[1];
+      g = "0x" + h[2] + h[2];
+      b = "0x" + h[3] + h[3];
+      a = "0x" + h[4] + h[4];
+  
+    } else if (h.length == 9) {
+      r = "0x" + h[1] + h[2];
+      g = "0x" + h[3] + h[4];
+      b = "0x" + h[5] + h[6];
+      a = "0x" + h[7] + h[8];
+    }
+    a = +(a / 255).toFixed(3);
+  
+    return "rgba(" + +r + "," + +g + "," + +b + "," + a + ")";
+  }
+
+function startGame(selectedValue, colr){
+ 
+    //character.style.background = 'red';
+    character.style.background = colr;
+
+
+    ballColor = hexAToRGBA(colr);
+    //character.style.backgroundColor = ballColor ;
+    //character.style.backgroundColor = ballColor;
 
     //alert(" Starting the game with " + selectedValue ) ;
 
@@ -152,6 +181,7 @@ function startGame(selectedValue){
         //alert(" Starting 2 the game with " + selectedValue ) ;
         level = document.getElementById("level");
         level.disabled = true; // disable reselection
+        favcolor.disabled = true;
         blocks = setInterval(runner, selectedValue );
     }
    
