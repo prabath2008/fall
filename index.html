@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Fall game</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">  
 </head>
 
 <body>
@@ -12,17 +12,36 @@
     <div id="parent" class="parentClass">
 
         <div id="config" class="cfg">
-                <h2> F a l  l... ... Game </h2>
-                <p> Name <input id="Name" type="text" placeholder="Name">  </p>
-                <p> Age <input id="Age"  type="text" placeholder="Age">  </p>
-                <p>
-                    Select and play the  desired Game Level below... 
-                    <select name="level" id="level" onChange="startGame(this.value)">
+                <table border=1>
+                <tr>
+                    <h1 align="left"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; F a l  l &nbsp;&nbsp;&nbsp;&nbsp;... &nbsp;&nbsp;&nbsp;&nbsp; ... Game </h1>
+                </tr>
+                <tr>
+                    <p> <td> Name  &nbsp;</td> <td> <input id="Name" type="text" placeholder="Name"> </td>  </p>
+                    <td> &nbsp;&nbsp;&nbsp;&nbsp;</td>
+                    <p> <td> Age  &nbsp;</td> <td> <input id="Age" type="text" placeholder="Age"> </td>  </p>
+                </tr>
+                <tr>                
+                    <br>
+                      <td> <label for="favcolor">Ball color  &nbsp;</label>  </td>
+                      <td align="left"> <input type="color" id="favcolor" name="favcolor" value="#ff0000"><br><br> </td>
+                   </br>
+                    <td> &nbsp;&nbsp;&nbsp;&nbsp;</td>
+                    <td> Game level   &nbsp;</td>
+                    <td>
+                    <select name="level" id="level" onChange="startGame(this.value, favcolor.value)">
                         <option value="0">Select your level</option>
                         <option value="32">Easy</option>
                         <option value="16">Medium</option>
                         <option value="8">Hard</option>
                     </select>
+                     </td>
+                     
+
+            </tr>
+               </table>  
+                      
+                      
                 </p>
                         
         </div>
@@ -36,3 +55,4 @@
     <script src="main_new.js"></script>
 
 </html>
+
